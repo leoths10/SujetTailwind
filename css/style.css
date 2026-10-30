@@ -91,49 +91,6 @@
   --space-6: 4.5rem;
 }
 
-/* ============================= Menu (page carte) ============================= */
-
-.menu-category {
-  margin-bottom: var(--space-5);
-}
-
-.menu-category__title {
-  border-bottom: 2px solid var(--color-accent);
-  padding-bottom: var(--space-1);
-  margin-bottom: var(--space-3);
-}
-
-.menu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-3);
-}
-
-.menu-item {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
-  align-items: baseline;
-}
-
-.menu-item__name {
-  font-weight: 700;
-}
-
-.menu-item__desc {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  display: block;
-}
-
-.menu-item__price {
-  font-weight: 700;
-  color: var(--color-primary);
-  white-space: nowrap;
-}
-
 /* ============================= Horaires ============================= */
 
 .hours-table {
