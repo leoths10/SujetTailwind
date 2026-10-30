@@ -1,0 +1,24 @@
+{
+  "name": "sujet",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoths10/SujetTailwind.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/leoths10/SujetTailwind/issues"
+  },
+  "homepage": "https://github.com/leoths10/SujetTailwind#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^7.3.7"
+  },
+  "private": true
+}
