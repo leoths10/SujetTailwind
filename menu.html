@@ -4,146 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/main.js" defer></script>
+  <script type="module" src="js/main.js"></script>
   <title>La Carte — La Table d'Amélie</title>
 </head>
-<body>
+<body class="bg-bg font-body text-text leading-[1.6]">
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="index.html" class="logo">La Table <span class="logo__accent">d'Amélie</span></a>
+  <header class="sticky top-0 z-20 border-b border-border bg-bg-alt">
+    <div class="mx-auto flex max-w-site 2k:max-w-site-2k items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-heading text-[1.4rem] font-bold text-text">La Table <span class="text-primary">d'Amélie</span></a>
 
-      <button type="button" class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <button type="button" class="nav__toggle inline-flex cursor-pointer items-center justify-center rounded-lg border border-border px-3 py-2 text-xl md:hidden" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
 
-      <nav class="nav" aria-label="Principale">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Accueil</a></li>
-          <li><a href="menu.html" class="nav__link nav__link--active">La Carte</a></li>
-          <li><a href="contact.html" class="nav__link">Contact</a></li>
-          <li class="nav__list--mobile-only"><button type="button" class="btn btn--primary" data-open-reservation>Réserver</button></li>
+      <nav class="nav absolute inset-x-0 top-full hidden border-b border-border bg-bg-alt px-6 py-4 md:static md:block md:border-0 md:bg-transparent md:p-0" aria-label="Principale">
+        <ul class="flex flex-col gap-4 md:flex-row md:gap-8">
+          <li><a href="index.html" class="border-b-2 border-transparent py-1 font-semibold text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary">Accueil</a></li>
+          <li><a href="menu.html" class="border-b-2 border-primary py-1 font-semibold text-primary transition-colors duration-200 hover:border-primary hover:text-primary">La Carte</a></li>
+          <li><a href="contact.html" class="border-b-2 border-transparent py-1 font-semibold text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary">Contact</a></li>
+          <li class="mt-2 md:hidden"><button type="button" class="btn btn-primary" data-open-reservation>Réserver</button></li>
         </ul>
       </nav>
 
-      <div class="header__actions">
-        <button type="button" class="btn btn--primary" data-open-reservation>Réserver</button>
+      <div class="hidden md:flex md:items-center md:gap-6">
+        <button type="button" class="btn btn-primary" data-open-reservation>Réserver</button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <div class="container">
-        <header class="section__header">
-          <p class="section__eyebrow">Carte de saison</p>
-          <h1 class="section__title">La Carte</h1>
-          <p class="section__intro">
+    <section class="py-18 2k:py-24">
+      <div class="mx-auto max-w-site 2k:max-w-site-2k px-6">
+        <header class="mx-auto mb-12 max-w-[60ch] text-center">
+          <p class="text-[0.8rem] font-bold tracking-widest text-primary uppercase">Carte de saison</p>
+          <h1 class="text-4xl leading-[1.2]">La Carte</h1>
+          <p class="text-text-muted">
             Tous nos plats sont préparés à partir de produits frais, livrés
             chaque matin par nos producteurs locaux.
           </p>
         </header>
 
-        <div class="menu-category">
-          <h2 class="menu-category__title">Entrées</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
+        <div class="mb-12">
+          <h2 class="mb-6 border-b-2 border-accent pb-2">Entrées</h2>
+          <ul class="grid gap-6">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Soupe à l'oignon gratinée</span>
-                <span class="menu-item__desc">Bouillon de bœuf, croûtons, comté affiné</span>
+                <span class="font-bold">Soupe à l'oignon gratinée</span>
+                <span class="block text-[0.9rem] text-text-muted">Bouillon de bœuf, croûtons, comté affiné</span>
               </span>
-              <span class="menu-item__price">9 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">9 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Salade de chèvre chaud</span>
-                <span class="menu-item__desc">Crottin de Rocamadour, miel, noix, mesclun</span>
+                <span class="font-bold">Salade de chèvre chaud</span>
+                <span class="block text-[0.9rem] text-text-muted">Crottin de Rocamadour, miel, noix, mesclun</span>
               </span>
-              <span class="menu-item__price">10 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">10 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Terrine de campagne maison</span>
-                <span class="menu-item__desc">Pain de campagne grillé, cornichons</span>
+                <span class="font-bold">Terrine de campagne maison</span>
+                <span class="block text-[0.9rem] text-text-muted">Pain de campagne grillé, cornichons</span>
               </span>
-              <span class="menu-item__price">8 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">8 €</span>
             </li>
           </ul>
         </div>
 
-        <div class="menu-category">
-          <h2 class="menu-category__title">Plats</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
+        <div class="mb-12">
+          <h2 class="mb-6 border-b-2 border-accent pb-2">Plats</h2>
+          <ul class="grid gap-6">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Joue de bœuf braisée</span>
-                <span class="menu-item__desc">Purée maison, vin rouge, légumes glacés</span>
+                <span class="font-bold">Joue de bœuf braisée</span>
+                <span class="block text-[0.9rem] text-text-muted">Purée maison, vin rouge, légumes glacés</span>
               </span>
-              <span class="menu-item__price">18 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">18 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Risotto aux champignons</span>
-                <span class="menu-item__desc">Parmesan affiné 24 mois, huile de truffe</span>
+                <span class="font-bold">Risotto aux champignons</span>
+                <span class="block text-[0.9rem] text-text-muted">Parmesan affiné 24 mois, huile de truffe</span>
               </span>
-              <span class="menu-item__price">15 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">15 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Suprême de volaille fermière</span>
-                <span class="menu-item__desc">Jus corsé, écrasé de pommes de terre</span>
+                <span class="font-bold">Suprême de volaille fermière</span>
+                <span class="block text-[0.9rem] text-text-muted">Jus corsé, écrasé de pommes de terre</span>
               </span>
-              <span class="menu-item__price">17 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">17 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Pavé de saumon, beurre blanc</span>
-                <span class="menu-item__desc">Légumes de saison, riz basmati</span>
+                <span class="font-bold">Pavé de saumon, beurre blanc</span>
+                <span class="block text-[0.9rem] text-text-muted">Légumes de saison, riz basmati</span>
               </span>
-              <span class="menu-item__price">19 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">19 €</span>
             </li>
           </ul>
         </div>
 
-        <div class="menu-category">
-          <h2 class="menu-category__title">Desserts</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
+        <div class="mb-12">
+          <h2 class="mb-6 border-b-2 border-accent pb-2">Desserts</h2>
+          <ul class="grid gap-6">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Tarte fine aux pommes</span>
-                <span class="menu-item__desc">Glace vanille de Madagascar</span>
+                <span class="font-bold">Tarte fine aux pommes</span>
+                <span class="block text-[0.9rem] text-text-muted">Glace vanille de Madagascar</span>
               </span>
-              <span class="menu-item__price">8 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">8 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Fondant au chocolat</span>
-                <span class="menu-item__desc">Cœur coulant, crème anglaise</span>
+                <span class="font-bold">Fondant au chocolat</span>
+                <span class="block text-[0.9rem] text-text-muted">Cœur coulant, crème anglaise</span>
               </span>
-              <span class="menu-item__price">8 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">8 €</span>
             </li>
-            <li class="menu-item">
+            <li class="flex items-baseline justify-between gap-6">
               <span>
-                <span class="menu-item__name">Crème brûlée à la vanille</span>
-                <span class="menu-item__desc">Gousse de Madagascar</span>
+                <span class="font-bold">Crème brûlée à la vanille</span>
+                <span class="block text-[0.9rem] text-text-muted">Gousse de Madagascar</span>
               </span>
-              <span class="menu-item__price">7 €</span>
+              <span class="font-bold whitespace-nowrap text-primary">7 €</span>
             </li>
           </ul>
         </div>
 
-        <div class="menu-category">
-          <h2 class="menu-category__title">Boissons</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
-              <span class="menu-item__name">Verre de Côtes-du-Rhône</span>
-              <span class="menu-item__price">6 €</span>
+        <div class="mb-12">
+          <h2 class="mb-6 border-b-2 border-accent pb-2">Boissons</h2>
+          <ul class="grid gap-6">
+            <li class="flex items-baseline justify-between gap-6">
+              <span class="font-bold">Verre de Côtes-du-Rhône</span>
+              <span class="font-bold whitespace-nowrap text-primary">6 €</span>
             </li>
-            <li class="menu-item">
-              <span class="menu-item__name">Limonade artisanale</span>
-              <span class="menu-item__price">4 €</span>
+            <li class="flex items-baseline justify-between gap-6">
+              <span class="font-bold">Limonade artisanale</span>
+              <span class="font-bold whitespace-nowrap text-primary">4 €</span>
             </li>
-            <li class="menu-item">
-              <span class="menu-item__name">Café / Expresso</span>
-              <span class="menu-item__price">2,50 €</span>
+            <li class="flex items-baseline justify-between gap-6">
+              <span class="font-bold">Café / Expresso</span>
+              <span class="font-bold whitespace-nowrap text-primary">2,50 €</span>
             </li>
           </ul>
         </div>
@@ -151,56 +151,56 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
+  <footer class="bg-footer pt-12 pb-6 text-footer-text">
+    <div class="mx-auto max-w-site 2k:max-w-site-2k px-6">
+      <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div>
-          <h2 class="site-footer__title">La Table d'Amélie</h2>
+          <h2 class="text-base leading-[1.2] text-white">La Table d'Amélie</h2>
           <p>Cuisine de saison, bistrot familial au cœur du Vieux Lyon depuis 1998.</p>
         </div>
         <div>
-          <h2 class="site-footer__title">Horaires</h2>
+          <h2 class="text-base leading-[1.2] text-white">Horaires</h2>
           <p>Mar–Sam : 12h–14h &amp; 19h–22h30<br />Dimanche &amp; lundi : fermé</p>
         </div>
         <div>
-          <h2 class="site-footer__title">Contact</h2>
-          <address>
+          <h2 class="text-base leading-[1.2] text-white">Contact</h2>
+          <address class="not-italic text-footer-muted">
             12 rue des Tables Claudiennes, 69005 Lyon<br />
             <a href="tel:+33478000000">04 78 00 00 00</a><br />
             <a href="mailto:contact@table-amelie.fr">contact@table-amelie.fr</a>
           </address>
         </div>
       </div>
-      <div class="site-footer__bottom">
+      <div class="border-t border-footer-line pt-6 text-center text-[0.85rem] text-footer-faint">
         © 2026 La Table d'Amélie — Tous droits réservés.
       </div>
     </div>
   </footer>
 
-  <dialog id="reservation-dialog" class="reservation-dialog">
-    <div class="reservation-dialog__inner">
-      <button type="button" class="reservation-dialog__close" aria-label="Fermer">✕</button>
+  <dialog id="reservation-dialog" class="m-auto w-full max-w-[440px] rounded-2xl shadow-card-lg backdrop:bg-text/50">
+    <div class="p-8">
+      <button type="button" class="reservation-dialog__close float-right cursor-pointer text-xl text-text-muted" aria-label="Fermer">✕</button>
       <h2>Réserver une table</h2>
       <form method="dialog">
-        <div class="form__row">
-          <div class="form__group">
-            <label class="form__label" for="resa-date">Date</label>
-            <input class="form__input" type="date" id="resa-date" name="date" required />
+        <div class="flex flex-col md:flex-row md:gap-4">
+          <div class="mb-6 md:flex-1">
+            <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-date">Date</label>
+            <input class="form-input" type="date" id="resa-date" name="date" required />
           </div>
-          <div class="form__group">
-            <label class="form__label" for="resa-time">Heure</label>
-            <input class="form__input" type="time" id="resa-time" name="time" required />
+          <div class="mb-6 md:flex-1">
+            <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-time">Heure</label>
+            <input class="form-input" type="time" id="resa-time" name="time" required />
           </div>
         </div>
-        <div class="form__group">
-          <label class="form__label" for="resa-guests">Nombre de personnes</label>
-          <input class="form__input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
+        <div class="mb-6">
+          <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-guests">Nombre de personnes</label>
+          <input class="form-input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
         </div>
-        <div class="form__group">
-          <label class="form__label" for="resa-email">Email</label>
-          <input class="form__input" type="email" id="resa-email" name="email" required />
+        <div class="mb-6">
+          <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-email">Email</label>
+          <input class="form-input" type="email" id="resa-email" name="email" required />
         </div>
-        <button type="submit" class="btn btn--primary">Confirmer la réservation</button>
+        <button type="submit" class="btn btn-primary">Confirmer la réservation</button>
       </form>
     </div>
   </dialog>
