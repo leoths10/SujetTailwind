@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <title>Contact — La Table d'Amélie</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo">La Table <span class="logo__accent">d'Amélie</span></a>
+
+      <button type="button" class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" aria-label="Principale">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Accueil</a></li>
+          <li><a href="menu.html" class="nav__link">La Carte</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+          <li class="nav__list--mobile-only"><button type="button" class="btn btn--primary" data-open-reservation>Réserver</button></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn btn--primary" data-open-reservation>Réserver</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">À votre écoute</p>
+          <h1 class="section__title">Contact &amp; horaires</h1>
+        </header>
+
+        <div class="contact-grid">
+          <div>
+            <h2>Une question, une demande spéciale ?</h2>
+            <form>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="nom">Nom</label>
+                  <input class="form__input" type="text" id="nom" name="nom" required minlength="2" />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="email">Email</label>
+                  <input class="form__input" type="email" id="email" name="email" required />
+                </div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="sujet">Sujet</label>
+                <select class="form__select" id="sujet" name="sujet">
+                  <option value="reservation">Réservation de groupe</option>
+                  <option value="privatisation">Privatisation</option>
+                  <option value="allergene">Question allergènes</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="message">Message</label>
+                <textarea class="form__textarea" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Envoyer le message</button>
+            </form>
+          </div>
+
+          <div>
+            <h2>Horaires d'ouverture</h2>
+            <table class="hours-table">
+              <thead>
+                <tr>
+                  <th scope="col">Jour</th>
+                  <th scope="col">Midi</th>
+                  <th scope="col">Soir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Lundi</th>
+                  <td colspan="2">Fermé</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mardi – Vendredi</th>
+                  <td>12h – 14h</td>
+                  <td>19h – 22h30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Samedi</th>
+                  <td>12h – 14h30</td>
+                  <td>19h – 23h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Dimanche</th>
+                  <td colspan="2">Fermé</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="faq-title">Questions fréquentes</h2>
+
+            <details class="faq">
+              <summary class="faq__summary">Proposez-vous des options végétariennes ?</summary>
+              <p class="faq__answer">
+                Oui, chaque carte propose au moins deux plats végétariens, identifiés par un badge dédié.
+              </p>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary">Acceptez-vous les groupes de plus de 8 personnes ?</summary>
+              <p class="faq__answer">
+                Pour les groupes de 9 personnes et plus, merci de nous contacter directement par téléphone.
+              </p>
+            </details>
+            <details class="faq">
+              <summary class="faq__summary">Le restaurant est-il accessible en fauteuil roulant ?</summary>
+              <p class="faq__answer">
+                Oui, la salle est accessible de plain-pied et dispose de toilettes adaptées.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2 class="site-footer__title">La Table d'Amélie</h2>
+          <p>Cuisine de saison, bistrot familial au cœur du Vieux Lyon depuis 1998.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Horaires</h2>
+          <p>Mar–Sam : 12h–14h &amp; 19h–22h30<br />Dimanche &amp; lundi : fermé</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Contact</h2>
+          <address>
+            12 rue des Tables Claudiennes, 69005 Lyon<br />
+            <a href="tel:+33478000000">04 78 00 00 00</a><br />
+            <a href="mailto:contact@table-amelie.fr">contact@table-amelie.fr</a>
+          </address>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        © 2026 La Table d'Amélie — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="reservation-dialog" class="reservation-dialog">
+    <div class="reservation-dialog__inner">
+      <button type="button" class="reservation-dialog__close" aria-label="Fermer">✕</button>
+      <h2>Réserver une table</h2>
+      <form method="dialog">
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="resa-date">Date</label>
+            <input class="form__input" type="date" id="resa-date" name="date" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="resa-time">Heure</label>
+            <input class="form__input" type="time" id="resa-time" name="time" required />
+          </div>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="resa-guests">Nombre de personnes</label>
+          <input class="form__input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="resa-email">Email</label>
+          <input class="form__input" type="email" id="resa-email" name="email" required />
+        </div>
+        <button type="submit" class="btn btn--primary">Confirmer la réservation</button>
+      </form>
+    </div>
+  </dialog>
+
+</body>
+</html>

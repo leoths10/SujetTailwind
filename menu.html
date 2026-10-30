@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+  <title>La Carte — La Table d'Amélie</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo">La Table <span class="logo__accent">d'Amélie</span></a>
+
+      <button type="button" class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" aria-label="Principale">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Accueil</a></li>
+          <li><a href="menu.html" class="nav__link nav__link--active">La Carte</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li class="nav__list--mobile-only"><button type="button" class="btn btn--primary" data-open-reservation>Réserver</button></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn btn--primary" data-open-reservation>Réserver</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow">Carte de saison</p>
+          <h1 class="section__title">La Carte</h1>
+          <p class="section__intro">
+            Tous nos plats sont préparés à partir de produits frais, livrés
+            chaque matin par nos producteurs locaux.
+          </p>
+        </header>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Entrées</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Soupe à l'oignon gratinée</span>
+                <span class="menu-item__desc">Bouillon de bœuf, croûtons, comté affiné</span>
+              </span>
+              <span class="menu-item__price">9 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Salade de chèvre chaud</span>
+                <span class="menu-item__desc">Crottin de Rocamadour, miel, noix, mesclun</span>
+              </span>
+              <span class="menu-item__price">10 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Terrine de campagne maison</span>
+                <span class="menu-item__desc">Pain de campagne grillé, cornichons</span>
+              </span>
+              <span class="menu-item__price">8 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Plats</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Joue de bœuf braisée</span>
+                <span class="menu-item__desc">Purée maison, vin rouge, légumes glacés</span>
+              </span>
+              <span class="menu-item__price">18 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Risotto aux champignons</span>
+                <span class="menu-item__desc">Parmesan affiné 24 mois, huile de truffe</span>
+              </span>
+              <span class="menu-item__price">15 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Suprême de volaille fermière</span>
+                <span class="menu-item__desc">Jus corsé, écrasé de pommes de terre</span>
+              </span>
+              <span class="menu-item__price">17 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Pavé de saumon, beurre blanc</span>
+                <span class="menu-item__desc">Légumes de saison, riz basmati</span>
+              </span>
+              <span class="menu-item__price">19 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Desserts</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Tarte fine aux pommes</span>
+                <span class="menu-item__desc">Glace vanille de Madagascar</span>
+              </span>
+              <span class="menu-item__price">8 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Fondant au chocolat</span>
+                <span class="menu-item__desc">Cœur coulant, crème anglaise</span>
+              </span>
+              <span class="menu-item__price">8 €</span>
+            </li>
+            <li class="menu-item">
+              <span>
+                <span class="menu-item__name">Crème brûlée à la vanille</span>
+                <span class="menu-item__desc">Gousse de Madagascar</span>
+              </span>
+              <span class="menu-item__price">7 €</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h2 class="menu-category__title">Boissons</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="menu-item__name">Verre de Côtes-du-Rhône</span>
+              <span class="menu-item__price">6 €</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Limonade artisanale</span>
+              <span class="menu-item__price">4 €</span>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item__name">Café / Expresso</span>
+              <span class="menu-item__price">2,50 €</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2 class="site-footer__title">La Table d'Amélie</h2>
+          <p>Cuisine de saison, bistrot familial au cœur du Vieux Lyon depuis 1998.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Horaires</h2>
+          <p>Mar–Sam : 12h–14h &amp; 19h–22h30<br />Dimanche &amp; lundi : fermé</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Contact</h2>
+          <address>
+            12 rue des Tables Claudiennes, 69005 Lyon<br />
+            <a href="tel:+33478000000">04 78 00 00 00</a><br />
+            <a href="mailto:contact@table-amelie.fr">contact@table-amelie.fr</a>
+          </address>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        © 2026 La Table d'Amélie — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="reservation-dialog" class="reservation-dialog">
+    <div class="reservation-dialog__inner">
+      <button type="button" class="reservation-dialog__close" aria-label="Fermer">✕</button>
+      <h2>Réserver une table</h2>
+      <form method="dialog">
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="resa-date">Date</label>
+            <input class="form__input" type="date" id="resa-date" name="date" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="resa-time">Heure</label>
+            <input class="form__input" type="time" id="resa-time" name="time" required />
+          </div>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="resa-guests">Nombre de personnes</label>
+          <input class="form__input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="resa-email">Email</label>
+          <input class="form__input" type="email" id="resa-email" name="email" required />
+        </div>
+        <button type="submit" class="btn btn--primary">Confirmer la réservation</button>
+      </form>
+    </div>
+  </dialog>
+
+</body>
+</html>
