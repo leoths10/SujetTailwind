@@ -142,38 +142,6 @@
   }
 }
 
-/* ============================= Sections génériques ============================= */
-
-.section {
-  padding: var(--space-6) 0;
-}
-
-.section--alt {
-  background: var(--color-bg-alt);
-}
-
-.section__header {
-  text-align: center;
-  max-width: 60ch;
-  margin: 0 auto var(--space-5);
-}
-
-.section__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.section__title {
-  font-size: 2.25rem;
-}
-
-.section__intro {
-  color: var(--color-text-muted);
-}
-
 /* ============================= Grille de plats (cartes) ============================= */
 
 .dish-grid {
