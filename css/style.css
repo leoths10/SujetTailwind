@@ -1,12 +1,6 @@
 @import 'tailwindcss';
 
-/* ==========================================================================
-   La Table d'Amélie — feuille de style "classique"
-   Pas de framework : variables CSS, BEM, Flexbox/Grid, media queries.
-   Écrit desktop-first (les media queries resserrent pour petit écran).
-   ========================================================================== */
-
-:root {
+@theme {
   --color-bg: #faf7f2;
   --color-bg-alt: #ffffff;
   --color-text: #2b2420;
@@ -19,13 +13,43 @@
   --font-heading: Georgia, 'Playfair Display', serif;
   --font-body: 'Segoe UI', system-ui, sans-serif;
 
-  --radius: 8px;
-  --radius-lg: 16px;
-  --shadow: 0 4px 12px rgba(43, 36, 32, 0.08);
-  --shadow-lg: 0 12px 32px rgba(43, 36, 32, 0.16);
+  --shadow-card: 0 4px 12px rgba(43, 36, 32, 0.08);
+  --shadow-card-lg: 0 12px 32px rgba(43, 36, 32, 0.16);
 
-  --container-width: 1100px;
+  --container-site: 1100px;
 
+  --breakpoint-2k: 2560px;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.17em; }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--color-primary);
+  }
+}
+
+:root {
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -34,39 +58,8 @@
   --space-6: 4.5rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  margin: 0 0 var(--space-2);
-  line-height: 1.2;
-}
-
-p {
-  margin: 0 0 var(--space-2);
-}
-
-a {
-  color: var(--color-primary);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .container {
-  max-width: var(--container-width);
+  max-width: var(--container-site);
   margin: 0 auto;
   padding: 0 var(--space-3);
 }
@@ -94,7 +87,7 @@ img {
 .btn--primary:hover {
   background: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card);
 }
 
 .btn--outline {
@@ -141,7 +134,7 @@ img {
   display: none;
   background: none;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   cursor: pointer;
@@ -232,8 +225,8 @@ img {
 }
 
 .hero__image {
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-card-lg);
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
@@ -292,15 +285,15 @@ img {
 .dish-card {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .dish-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-card-lg);
 }
 
 .dish-card__image {
@@ -363,7 +356,7 @@ img {
 
 .testimonial {
   background: var(--color-bg);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-2xl);
   padding: var(--space-4);
   border: 1px solid var(--color-border);
 }
@@ -431,9 +424,9 @@ img {
   width: 100%;
   border-collapse: collapse;
   background: var(--color-bg-alt);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-card);
 }
 
 .hours-table th,
@@ -456,7 +449,7 @@ img {
 .faq {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   padding: var(--space-2) var(--space-3);
   margin-bottom: var(--space-2);
 }
@@ -496,7 +489,7 @@ img {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   font: inherit;
   background: var(--color-bg-alt);
 }
@@ -521,11 +514,11 @@ img {
 
 .reservation-dialog {
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-2xl);
   padding: 0;
   max-width: 440px;
   width: 100%;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-card-lg);
 }
 
 .reservation-dialog::backdrop {
