@@ -31,22 +31,22 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Bistrot familial depuis 1998</p>
-          <h1 class="hero__title">Une cuisine généreuse, au cœur de Lyon</h1>
-          <p class="hero__subtitle">
+    <section class="bg-linear-135 from-white to-bg py-18 2k:py-24">
+      <div class="mx-auto grid max-w-site grid-cols-1 items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="min-w-0 motion-safe:animate-fade-in-up">
+          <p class="mb-2 text-[0.8rem] font-bold tracking-widest text-primary uppercase">Bistrot familial depuis 1998</p>
+          <h1 class="text-[1.75rem] leading-[1.2] md:text-4xl lg:text-5xl">Une cuisine généreuse, au cœur de Lyon</h1>
+          <p class="max-w-[38ch] text-lg leading-[1.6] text-text-muted">
             Des produits frais, une carte qui change au fil des saisons, et
             l'accueil chaleureux d'une maison de famille.
           </p>
-          <div class="hero__actions">
+          <div class="mt-6 flex flex-col gap-4 md:flex-row">
             <a href="menu.html" class="btn btn-outline">Voir la carte</a>
             <button type="button" class="btn btn-primary" data-open-reservation>Réserver une table</button>
           </div>
         </div>
         <img
-          class="hero__image"
+          class="min-w-0 aspect-4/3 rounded-2xl object-cover shadow-card-lg"
           src="https://picsum.photos/seed/amelie-hero/800/600"
           alt="Salle du restaurant La Table d'Amélie, tables dressées"
         />
@@ -64,38 +64,38 @@
           </p>
         </header>
 
-        <div class="dish-grid">
-          <article class="dish-card">
-            <img class="dish-card__image" src="https://picsum.photos/seed/amelie-boeuf/400/300" alt="Joue de bœuf braisée, purée maison" loading="lazy" />
-            <div class="dish-card__body">
-              <div class="dish-card__top">
-                <h3 class="dish-card__title">Joue de bœuf braisée</h3>
-                <span class="dish-card__price">18 €</span>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <article class="overflow-hidden rounded-2xl border border-border bg-bg-alt shadow-card transition duration-250 hover:-translate-y-1.5 hover:shadow-card-lg">
+            <img class="h-50 w-full object-cover" src="https://picsum.photos/seed/amelie-boeuf/400/300" alt="Joue de bœuf braisée, purée maison" loading="lazy" />
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="m-0 text-[1.15rem]">Joue de bœuf braisée</h3>
+                <span class="font-bold whitespace-nowrap text-primary">18 €</span>
               </div>
-              <p class="dish-card__desc">Braisée 6 heures au vin rouge, purée de pommes de terre maison.</p>
+              <p class="text-[0.925rem] text-text-muted">Braisée 6 heures au vin rouge, purée de pommes de terre maison.</p>
             </div>
           </article>
 
-          <article class="dish-card">
-            <img class="dish-card__image" src="https://picsum.photos/seed/amelie-risotto/400/300" alt="Risotto aux champignons de saison" loading="lazy" />
-            <div class="dish-card__body">
-              <div class="dish-card__top">
-                <h3 class="dish-card__title">Risotto aux champignons</h3>
-                <span class="dish-card__price">15 €</span>
+          <article class="overflow-hidden rounded-2xl border border-border bg-bg-alt shadow-card transition duration-250 hover:-translate-y-1.5 hover:shadow-card-lg">
+            <img class="h-50 w-full object-cover" src="https://picsum.photos/seed/amelie-risotto/400/300" alt="Risotto aux champignons de saison" loading="lazy" />
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="m-0 text-[1.15rem]">Risotto aux champignons</h3>
+                <span class="font-bold whitespace-nowrap text-primary">15 €</span>
               </div>
-              <span class="badge badge--veggie">Végétarien</span>
-              <p class="dish-card__desc">Champignons de saison, parmesan affiné 24 mois, huile de truffe.</p>
+              <span class="inline-block rounded-full bg-veggie-light/15 px-[0.6rem] py-[0.2rem] text-[0.7rem] font-bold tracking-wider text-veggie uppercase">Végétarien</span>
+              <p class="text-[0.925rem] text-text-muted">Champignons de saison, parmesan affiné 24 mois, huile de truffe.</p>
             </div>
           </article>
 
-          <article class="dish-card">
-            <img class="dish-card__image" src="https://picsum.photos/seed/amelie-tarte/400/300" alt="Tarte fine aux pommes" loading="lazy" />
-            <div class="dish-card__body">
-              <div class="dish-card__top">
-                <h3 class="dish-card__title">Tarte fine aux pommes</h3>
-                <span class="dish-card__price">8 €</span>
+          <article class="overflow-hidden rounded-2xl border border-border bg-bg-alt shadow-card transition duration-250 hover:-translate-y-1.5 hover:shadow-card-lg">
+            <img class="h-50 w-full object-cover" src="https://picsum.photos/seed/amelie-tarte/400/300" alt="Tarte fine aux pommes" loading="lazy" />
+            <div class="p-6">
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="m-0 text-[1.15rem]">Tarte fine aux pommes</h3>
+                <span class="font-bold whitespace-nowrap text-primary">8 €</span>
               </div>
-              <p class="dish-card__desc">Pommes caramélisées, pâte feuilletée maison, glace vanille de Madagascar.</p>
+              <p class="text-[0.925rem] text-text-muted">Pommes caramélisées, pâte feuilletée maison, glace vanille de Madagascar.</p>
             </div>
           </article>
         </div>
@@ -109,24 +109,24 @@
           <h2 class="text-4xl leading-[1.2]" id="avis-title">Avis de nos clients</h2>
         </header>
 
-        <div class="testimonial-grid">
-          <article class="testimonial">
-            <p class="testimonial__quote">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-border bg-bg p-8">
+            <p class="italic">
               "Un accueil formidable et une cuisine qui sent le fait-maison. On y retourne à chaque passage à Lyon."
             </p>
-            <p class="testimonial__author">— Claire M.</p>
+            <p class="flex items-center gap-4 text-[0.9rem] font-semibold text-text-muted">— Claire M.</p>
           </article>
-          <article class="testimonial">
-            <p class="testimonial__quote">
+          <article class="rounded-2xl border border-border bg-bg p-8">
+            <p class="italic">
               "Le risotto aux champignons est devenu notre rituel du dimanche soir. Simplement excellent."
             </p>
-            <p class="testimonial__author">— Karim B.</p>
+            <p class="flex items-center gap-4 text-[0.9rem] font-semibold text-text-muted">— Karim B.</p>
           </article>
-          <article class="testimonial">
-            <p class="testimonial__quote">
+          <article class="rounded-2xl border border-border bg-bg p-8">
+            <p class="italic">
               "Petite salle chaleureuse, service attentionné, et l'addition reste raisonnable. Parfait."
             </p>
-            <p class="testimonial__author">— Julie & Marc</p>
+            <p class="flex items-center gap-4 text-[0.9rem] font-semibold text-text-muted">— Julie & Marc</p>
           </article>
         </div>
       </div>
