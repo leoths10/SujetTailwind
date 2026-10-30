@@ -54,6 +54,10 @@
   @apply border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
 }
 
+.nav--open {
+  @apply block;
+}
+
 :root {
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -67,78 +71,6 @@
   max-width: var(--container-site);
   margin: 0 auto;
   padding: 0 var(--space-3);
-}
-
-/* ============================= Header / Nav ============================= */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.site-header__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-2) 0;
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.logo__accent {
-  color: var(--color-primary);
-}
-
-.nav__toggle {
-  display: none;
-  background: none;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 0.5rem 0.75rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.nav__list {
-  display: flex;
-  gap: var(--space-4);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: var(--color-text-muted);
-  font-weight: 600;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.nav__link:hover,
-.nav__link--active {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.nav__list--mobile-only {
-  display: none;
-}
-
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
 }
 
 /* ============================= Hero ============================= */
@@ -566,44 +498,6 @@
 }
 
 @media (max-width: 600px) {
-  .nav__toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Le bouton "Réserver" du header est retiré sur mobile pour laisser
-     la place au logo + burger ; il reste accessible via le hero et le
-     menu mobile ouvert. */
-  .header__actions {
-    display: none;
-  }
-
-  .nav__list--mobile-only {
-    display: list-item;
-    margin-top: var(--space-1);
-  }
-
-  .nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-bg-alt);
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .nav--open {
-    display: block;
-  }
-
-  .nav__list {
-    flex-direction: column;
-    gap: var(--space-2);
-  }
-
   .hero__title {
     font-size: 1.75rem;
   }
