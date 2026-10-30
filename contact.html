@@ -38,7 +38,7 @@
           <h1 class="text-4xl leading-[1.2]">Contact &amp; horaires</h1>
         </header>
 
-        <div class="contact-grid">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <h2>Une question, une demande spéciale ?</h2>
             <form>
@@ -71,53 +71,53 @@
 
           <div>
             <h2>Horaires d'ouverture</h2>
-            <table class="hours-table">
+            <table class="w-full overflow-hidden rounded-lg bg-bg-alt shadow-card">
               <thead>
-                <tr>
-                  <th scope="col">Jour</th>
-                  <th scope="col">Midi</th>
-                  <th scope="col">Soir</th>
+                <tr class="border-b border-border">
+                  <th class="px-6 py-4 text-left" scope="col">Jour</th>
+                  <th class="px-6 py-4 text-left" scope="col">Midi</th>
+                  <th class="px-6 py-4 text-left" scope="col">Soir</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Lundi</th>
-                  <td colspan="2">Fermé</td>
+                <tr class="border-b border-border">
+                  <th class="px-6 py-4 text-left" scope="row">Lundi</th>
+                  <td class="px-6 py-4" colspan="2">Fermé</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <th class="px-6 py-4 text-left" scope="row">Mardi – Vendredi</th>
+                  <td class="px-6 py-4">12h – 14h</td>
+                  <td class="px-6 py-4">19h – 22h30</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <th class="px-6 py-4 text-left" scope="row">Samedi</th>
+                  <td class="px-6 py-4">12h – 14h30</td>
+                  <td class="px-6 py-4">19h – 23h</td>
                 </tr>
                 <tr>
-                  <th scope="row">Mardi – Vendredi</th>
-                  <td>12h – 14h</td>
-                  <td>19h – 22h30</td>
-                </tr>
-                <tr>
-                  <th scope="row">Samedi</th>
-                  <td>12h – 14h30</td>
-                  <td>19h – 23h</td>
-                </tr>
-                <tr>
-                  <th scope="row">Dimanche</th>
-                  <td colspan="2">Fermé</td>
+                  <th class="px-6 py-4 text-left" scope="row">Dimanche</th>
+                  <td class="px-6 py-4" colspan="2">Fermé</td>
                 </tr>
               </tbody>
             </table>
 
-            <h2 class="faq-title">Questions fréquentes</h2>
+            <h2 class="mt-8">Questions fréquentes</h2>
 
-            <details class="faq">
-              <summary class="faq__summary">Proposez-vous des options végétariennes ?</summary>
-              <p class="faq__answer">
+            <details class="mb-4 rounded-lg border border-border bg-bg-alt px-6 py-4">
+              <summary class="cursor-pointer font-semibold">Proposez-vous des options végétariennes ?</summary>
+              <p class="mt-4 text-text-muted">
                 Oui, chaque carte propose au moins deux plats végétariens, identifiés par un badge dédié.
               </p>
             </details>
-            <details class="faq">
-              <summary class="faq__summary">Acceptez-vous les groupes de plus de 8 personnes ?</summary>
-              <p class="faq__answer">
+            <details class="mb-4 rounded-lg border border-border bg-bg-alt px-6 py-4">
+              <summary class="cursor-pointer font-semibold">Acceptez-vous les groupes de plus de 8 personnes ?</summary>
+              <p class="mt-4 text-text-muted">
                 Pour les groupes de 9 personnes et plus, merci de nous contacter directement par téléphone.
               </p>
             </details>
-            <details class="faq">
-              <summary class="faq__summary">Le restaurant est-il accessible en fauteuil roulant ?</summary>
-              <p class="faq__answer">
+            <details class="mb-4 rounded-lg border border-border bg-bg-alt px-6 py-4">
+              <summary class="cursor-pointer font-semibold">Le restaurant est-il accessible en fauteuil roulant ?</summary>
+              <p class="mt-4 text-text-muted">
                 Oui, la salle est accessible de plain-pied et dispose de toilettes adaptées.
               </p>
             </details>
