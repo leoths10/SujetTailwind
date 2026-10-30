@@ -9,6 +9,11 @@
   --color-primary-dark: #7e2d22;
   --color-accent: #c9a24b;
   --color-border: #e4ddd2;
+  --color-footer: #231b17;
+  --color-footer-text: #d8cfc5;
+  --color-footer-muted: #bcb0a4;
+  --color-footer-line: #3a2f28;
+  --color-footer-faint: #8a7d70;
 
   --font-heading: Georgia, 'Playfair Display', serif;
   --font-body: 'Segoe UI', system-ui, sans-serif;
@@ -56,6 +61,10 @@
 
 .nav--open {
   @apply block;
+}
+
+.form-input {
+  @apply w-full rounded-lg border border-border bg-bg-alt px-[0.85rem] py-[0.65rem] focus:outline-2 focus:outline-offset-1 focus:outline-primary;
 }
 
 :root {
@@ -340,106 +349,6 @@
   gap: var(--space-5);
 }
 
-.form__group {
-  margin-bottom: var(--space-3);
-}
-
-.form__label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-  font-size: 0.9rem;
-}
-
-.form__input,
-.form__textarea,
-.form__select {
-  width: 100%;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  font: inherit;
-  background: var(--color-bg-alt);
-}
-
-.form__input:focus,
-.form__textarea:focus,
-.form__select:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 1px;
-}
-
-.form__row {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.form__row .form__group {
-  flex: 1;
-}
-
-/* ============================= Dialog de réservation ============================= */
-
-.reservation-dialog {
-  border: none;
-  border-radius: var(--radius-2xl);
-  padding: 0;
-  max-width: 440px;
-  width: 100%;
-  box-shadow: var(--shadow-card-lg);
-}
-
-.reservation-dialog::backdrop {
-  background: rgba(43, 36, 32, 0.5);
-}
-
-.reservation-dialog__inner {
-  padding: var(--space-4);
-}
-
-.reservation-dialog__close {
-  float: right;
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  cursor: pointer;
-  color: var(--color-text-muted);
-}
-
-/* ============================= Footer ============================= */
-
-.site-footer {
-  background: #231b17;
-  color: #d8cfc5;
-  padding: var(--space-5) 0 var(--space-3);
-}
-
-.site-footer__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-
-.site-footer__title {
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: var(--space-2);
-}
-
-.site-footer address {
-  font-style: normal;
-  color: #bcb0a4;
-}
-
-.site-footer__bottom {
-  border-top: 1px solid #3a2f28;
-  padding-top: var(--space-3);
-  font-size: 0.85rem;
-  color: #8a7d70;
-  text-align: center;
-}
-
 /* ============================= Responsive (desktop-first) ============================= */
 
 @media (max-width: 900px) {
@@ -459,10 +368,6 @@
   .contact-grid {
     grid-template-columns: 1fr;
   }
-
-  .site-footer__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 600px) {
@@ -477,15 +382,6 @@
 
   .dish-grid,
   .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form__row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .site-footer__grid {
     grid-template-columns: 1fr;
   }
 }

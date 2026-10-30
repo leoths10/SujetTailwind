@@ -133,55 +133,55 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
+  <footer class="bg-footer pt-12 pb-6 text-footer-text">
+    <div class="mx-auto max-w-site px-6">
+      <div class="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <div>
-          <h2 class="site-footer__title">La Table d'Amélie</h2>
+          <h2 class="text-base leading-[1.2] text-white">La Table d'Amélie</h2>
           <p>Cuisine de saison, bistrot familial au cœur du Vieux Lyon depuis 1998.</p>
         </div>
         <div>
-          <h2 class="site-footer__title">Horaires</h2>
+          <h2 class="text-base leading-[1.2] text-white">Horaires</h2>
           <p>Mar–Sam : 12h–14h &amp; 19h–22h30<br />Dimanche &amp; lundi : fermé</p>
         </div>
         <div>
-          <h2 class="site-footer__title">Contact</h2>
-          <address>
+          <h2 class="text-base leading-[1.2] text-white">Contact</h2>
+          <address class="not-italic text-footer-muted">
             12 rue des Tables Claudiennes, 69005 Lyon<br />
             <a href="tel:+33478000000">04 78 00 00 00</a><br />
             <a href="mailto:contact@table-amelie.fr">contact@table-amelie.fr</a>
           </address>
         </div>
       </div>
-      <div class="site-footer__bottom">
+      <div class="border-t border-footer-line pt-6 text-center text-[0.85rem] text-footer-faint">
         © 2026 La Table d'Amélie — Tous droits réservés.
       </div>
     </div>
   </footer>
 
   <!-- Dialog native de réservation, partagée par toutes les pages -->
-  <dialog id="reservation-dialog" class="reservation-dialog">
-    <div class="reservation-dialog__inner">
-      <button type="button" class="reservation-dialog__close" aria-label="Fermer">✕</button>
+  <dialog id="reservation-dialog" class="m-auto w-full max-w-[440px] rounded-2xl shadow-card-lg backdrop:bg-text/50">
+    <div class="p-8">
+      <button type="button" class="reservation-dialog__close float-right cursor-pointer text-xl text-text-muted" aria-label="Fermer">✕</button>
       <h2>Réserver une table</h2>
       <form method="dialog">
-        <div class="form__row">
-          <div class="form__group">
-            <label class="form__label" for="resa-date">Date</label>
-            <input class="form__input" type="date" id="resa-date" name="date" required />
+        <div class="flex flex-col md:flex-row md:gap-4">
+          <div class="mb-6 md:flex-1">
+            <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-date">Date</label>
+            <input class="form-input" type="date" id="resa-date" name="date" required />
           </div>
-          <div class="form__group">
-            <label class="form__label" for="resa-time">Heure</label>
-            <input class="form__input" type="time" id="resa-time" name="time" required />
+          <div class="mb-6 md:flex-1">
+            <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-time">Heure</label>
+            <input class="form-input" type="time" id="resa-time" name="time" required />
           </div>
         </div>
-        <div class="form__group">
-          <label class="form__label" for="resa-guests">Nombre de personnes</label>
-          <input class="form__input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
+        <div class="mb-6">
+          <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-guests">Nombre de personnes</label>
+          <input class="form-input" type="number" id="resa-guests" name="guests" min="1" max="12" value="2" required />
         </div>
-        <div class="form__group">
-          <label class="form__label" for="resa-email">Email</label>
-          <input class="form__input" type="email" id="resa-email" name="email" required />
+        <div class="mb-6">
+          <label class="mb-[0.35rem] block text-[0.9rem] font-semibold" for="resa-email">Email</label>
+          <input class="form-input" type="email" id="resa-email" name="email" required />
         </div>
         <button type="submit" class="btn btn-primary">Confirmer la réservation</button>
       </form>
