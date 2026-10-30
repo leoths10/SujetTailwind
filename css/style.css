@@ -22,13 +22,6 @@
 }
 
 @layer base {
-  body {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    background: var(--color-bg);
-    line-height: 1.6;
-  }
-
   h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -49,6 +42,18 @@
   }
 }
 
+.btn {
+  @apply inline-flex cursor-pointer items-center gap-2 rounded-full border-2 border-transparent px-6 py-3 font-semibold no-underline transition duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-card;
+}
+
+.btn-outline {
+  @apply border-primary bg-transparent text-primary hover:bg-primary hover:text-white;
+}
+
 :root {
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -62,43 +67,6 @@
   max-width: var(--container-site);
   margin: 0 auto;
   padding: 0 var(--space-3);
-}
-
-/* ============================= Boutons ============================= */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.btn--primary {
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background: var(--color-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-card);
-}
-
-.btn--outline {
-  background: transparent;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
-.btn--outline:hover {
-  background: var(--color-primary);
-  color: #fff;
 }
 
 /* ============================= Header / Nav ============================= */
